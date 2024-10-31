@@ -1,27 +1,34 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+// `@type` JSDoc annotations allow editor autocompletion and type checking
+// (when paired with `@ts-check`).
+// There are various equivalent ways to declare your Docusaurus config.
+// See: https://docusaurus.io/docs/api/docusaurus-config
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  title: 'senhasegura Help Center',
+  tagline: 'senhasegura documentation',
   favicon: 'img/favicon.ico',
+
+  // Set the production url of your site here
+  url: 'https://your-docusaurus-site.example.com',
+  // Set the /<baseUrl>/ pathname under which your site is served
+  // For GitHub pages deployment, it is often '/<projectName>/'
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+
+  // Even if you don't use internationalization, you can use this field to set
+  // useful metadata like html lang. For example, if your site is Chinese, you
+  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -33,7 +40,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -41,13 +48,21 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          feedOptions: {
+            type: ['rss', 'atom'],
+            xslt: true,
+          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/rdoteam/cfdocus',
+          // Useful options to enforce blogging best practices
+          onInlineTags: 'warn',
+          onInlineAuthors: 'warn',
+          onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: './src/css/custom.css',
         },
       }),
     ],
@@ -56,24 +71,20 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // Replace with your project's social card
+      image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'senhasegura',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'senhasegura',
           src: 'img/logo.svg',
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
+            label: 'Documentation',
           },
         ],
       },
@@ -81,52 +92,92 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'SENHASEGURA',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Contato',
+                to: 'https://senhasegura.com/pt-br/contato?utm_source=helpcenter&utm_medium=referral&utm_campaign=helpcenter_senhasegura',
+              },
+              {
+                label: 'Política de suporte',
+                to: 'https://docs.senhasegura.io/docs/pt/support-policy',
+              },
+              {
+                label: 'Serviços profissionais',
+                to: 'https://docs.senhasegura.io/docs/pt/professional-services',
+              },
+              {
+                label: 'End of Life - EoL',
+                to: 'https://docs.senhasegura.io/docs/pt/end-of-life-eol',
+              },
+              {
+                label: 'Guia para resolução de vulnerabilidades',
+                to: 'https://docs.senhasegura.io/docs/pt/vulnerability-handling-guidelines',
+              },
+              {
+                label: 'Certificação ISO 27001',
+                to: 'https://docs.senhasegura.io/docs/pt/iso-27001-certification',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'LEARN',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'senhasegura Community',
+                href: 'https://community.senhasegura.io/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'senhasegura Academy',
+                href: 'https://academy.senhasegura.com/my/?utm_source=HelpCenter&utm_medium=Footer&utm_campaign=FooterLink',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'senhasegura Shorts',
+                href: 'https://d.senhasegura.io/shorts?utm_source=HelpCenter&utm_medium=Footer&utm_campaign=FooterLink',
               },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                href: 'https://senhasegura.com/blog/?utm_source=HelpCenter&utm_medium=Footer&utm_campaign=FooterLink',
               },
               {
+                label: 'Cyber notes cast',
+                href: 'https://open.spotify.com/show/5JpD1BYjxwxDO38ngoiwwB?si=7060114f2b1b4a15',
+              },
+            ],
+          },
+          {
+            title: 'EXPLORE',
+            items: [
+              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/rdoteam/cfdocus',
+              },
+              {
+                label: 'Materiais ricos',
+                href: 'https://lp.senhasegura.co/pt/materiais-ricos?utm_source=helpcenter&utm_medium=referral&utm_campaign=helpcenter_explore',
+              },
+              {
+                label: 'Portal Affinity',
+                href: 'https://newaffinity.senhasegura.io/?utm_source=HelpCenter&utm_medium=Footer&utm_campaign=FooterLink',
+              },
+              {
+                label: 'PAM Solution',
+                href: 'https://suporte.senhasegura.com/?utm_source=HelpCenter&utm_medium=Footer&utm_campaign=FooterLink',
+              },
+              {
+                label: 'Solicitar feature',
+                href: 'https://senhasegura.com/pt-br/suggestions?utm_source=helpcenter&utm_medium=referral&utm_campaign=helpcenter_explore',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} senhasegura, Inc. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
       },
     }),
 };
 
-module.exports = config;
+export default config;

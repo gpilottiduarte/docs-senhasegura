@@ -1,47 +1,45 @@
 ---
 sidebar_position: 1
 ---
+# Upgrade notes
 
-# Tutorial Intro
+:::danger
 
-Let's discover **Docusaurus in less than 5 minutes**.
+- Before executing the senhasegura update, **always run a snapshot on your hypervisor** and perform the [running and restoring backup](https://docs.senhasegura.io/docs/orbit-config-manager-running-and-restoring-backup)
 
-## Getting Started
+- If you use the **senhasegura Arbitrator**, remove it from the cluster before updating senhasegura. [Learn more in our documentation](https://docs.senhasegura.io/docs/arbitrator-update).
 
-Get started by **creating a new site**.
+- Zabbix users must reconfigure the application if it presents any problem after updating. Find instructions in the article [How to configure Zabbix via Orbit CLI](https://docs.senhasegura.io/docs/orbit-cli-how-to-configure-zabbix-via-orbit-cli).
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+:::
 
-### What you'll need
+This update focuses on three areas: PAM Core, MySafe, and Certificate Manager. Check out the highlights we've brought to each of them.
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+PAM Core
+--------
 
-## Generate a new site
+We've made accessing the Database Proxy easier by enabling authentication with an Active Directory user. Now, users can utilize their [domain credentials to access the MS SQL Server Management Studio](https://docs.senhasegura.io/docs/pam-session-how-to-start-a-ms-sql-server-session-with-ms-sql-server-management-studio).
+We've improved the remote session authentications by allowing Kerberos to perform authentication in cases where Active Directory manages privileged credentials that are part of the Protected Users Security Group.
 
-Generate a new Docusaurus site using the **classic template**.
+We've added the option for authentication in RDP Proxy sessions via a file. It´s now possible to [generate a .rdp file with a temporary token](https://docs.senhasegura.io/docs/pam-session-how-to-use-a-rdp-file-to-start-a-remote-session) that allows access via RDP Gate on the target device without the need to input the user’s authentication information.
 
-The classic template will automatically be added to your project after you run the command:
+We've updated the libraries used in the terminal proxy and web proxy for SSH connection. Now, we offer support for the rsa-sha2-256 algorithm for remote sessions.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+MySafe
+------
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+Starting from this version, when accessing via the web, it's also possible to [manage TOTP tokens](https://docs.senhasegura.io/v3-32/docs/mysafe-passwords-add) in MySafe. Passwords stored in MySafe can be accompanied by their respective token, eliminating the need for a third-party authentication app for multi-factor authentication (MFA).
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+Certificate Manager
+-------------------
 
-## Start your site
+We’ve released a new integration with the [Entrust Certificate Authority (CA)](https://docs.senhasegura.io/docs/en/certificate-manager-reference-supported-cas). Signing and revoking certificates with the Entrust CA through the platform is now possible.
 
-Run the development server:
+We’ve made it possible to [import SSL certificates via API](https://docs.senhasegura.io/v3-32/docs/a2a-api-certificate-manager) Signed certificates can now be included in the Certificate Manager using the endpoint provided.
 
-```bash
-cd my-website
-npm run start
-```
+PEDM GO Endpoint Manager
+------------------------
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+Version 3.32 of PEDM Go Endpoint Manager for Windows introduces a new architecture to improve performance and security, in addition to adding new features. From this version, the PEDM GO will have two management interfaces.: "GO Endpoint Manager New" and "GO Endpoint Manager Old". Refer to the [changelog](https://docs.senhasegura.io/docs/changelog#pedm-windows) and [documentation](https://docs.senhasegura.io/docs/go-windows-about-new-go-pedm) for more information.
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Was this article helpful?

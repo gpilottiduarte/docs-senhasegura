@@ -84,7 +84,7 @@ Ensure the button appears; otherwise, refer to [How to enable Recovery](/v3-32/d
 6. Once the Orbit Web interface is available on **Member B**, check if the tag indicates that this instance is now the **Primary** member.
 7. To access other senhasegura modules, you need to enable the application. Go to **Orbit > Settings > Application**, and toggle the **Enable application** button to the active position.
 8. Click **Save**. 
-:::(info)(Info)
+ :::info(Info)
 If the green color is displayed, then the application is activated.
 :::
 9.  Log out and log in again to access other modules.

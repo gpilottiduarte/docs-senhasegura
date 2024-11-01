@@ -19,7 +19,7 @@ This article contains detailed information about the Session events report, wher
 **Export CSV**|It's the option identified by the paper sheet icon. It downloads the report.
 **Schedule report**|It's the option identified by the clock icon. It opens the Schedule report form.
 
- :::info (**Info**)
+  :::info
 When clicked, the **question mark** displayed on the page, sends you to the correct documentation.
 :::
 ***
@@ -76,6 +76,6 @@ At **Events** field, it’s possible to have several kinds of events, such as:
 * **Session start**
 * **Session end**
 
- :::info (**Info**)
+  :::info
 The report only displays 30 lines per page, to go to the next ones, click on the advance buttons at the end of the report.
 :::

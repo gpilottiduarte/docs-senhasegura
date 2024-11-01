@@ -44,7 +44,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/gpilottiduarte/docs-senhasegura',
         },
         blog: {
           showReadingTime: true,
@@ -55,7 +55,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/rdoteam/cfdocus',
+            'https://github.com/gpilottiduarte/docs-senhasegura',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -77,7 +77,7 @@ const config = {
         title: 'senhasegura',
         logo: {
           alt: 'senhasegura',
-          src: 'img/logo.svg',
+          src: 'img/senhasegura.png',
         },
         items: [
           {
@@ -150,7 +150,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/rdoteam/cfdocus',
+                href: 'https://github.com/gpilottiduarte/docs-senhasegura',
               },
               {
                 label: 'Materiais ricos',

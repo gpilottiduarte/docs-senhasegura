@@ -1,48 +1,56 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import React from 'react';
+import Link from '@docusaurus/Link';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Changelog',
+    Img: '/img/settings.png',
+    link: '/docs/changelog', // Adiciona o link correspondente
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+       Check the changelog for the new senhasegura version.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Upgrade notes',
+    Img: '/img/reports.png',
+    link: '/docs/upgrade_notes', // Adiciona o link correspondente
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Check the upgrade notes for the new senhasegura version
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Documentation',
+    Img: '/img/desktop.png',
+    link: '/docs/changelog', // Adiciona o link correspondente
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Check the senhasegura documentation.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Img, link, title, description}) {
+  const imgStyle = {
+    /* Removemos as definições de tamanho para usar o tamanho original */
+  };
+
   return (
-    <div className={clsx('col col--4')}>
+    <div className={styles.feature}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <Link to={link}>
+          <img src={Img} style={imgStyle} className={styles.featureImage} alt={title} />
+        </Link>
       </div>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
+        <h3>{title}</h3>
         <p>{description}</p>
       </div>
     </div>

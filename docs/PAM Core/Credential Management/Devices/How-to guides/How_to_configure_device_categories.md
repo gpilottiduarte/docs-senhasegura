@@ -75,7 +75,7 @@ To register a new device vendor in **PAM Core**, follow these steps:
 
 To save the new manufacturer, click the **Save** button.
 
-::: (Warning) (Important)
+ :::warning
 All ID icons you upload must be in JPG or PNG formats, and must not exceed 200 KB.
 :::
 

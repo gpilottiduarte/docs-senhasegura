@@ -81,7 +81,7 @@ The report displays 30 records per screen. To go to the next screen, click the n
 * Additional information about the video viewing request, such as the type and host of the session to be viewed.
 
 #### Action buttons
-::: (info) (**Info**)
+:::info
 If the user has the role of approver, these action buttons will also be available in this report.
 :::
 

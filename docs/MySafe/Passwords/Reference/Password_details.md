@@ -2,7 +2,7 @@
 
 This article contains detailed information regarding the **Password details** screen present on **MySafe**’s **Passwords** screen.
 
-::: (Info) (Path to access:)
+:::info
 **Grid Menu > MySafe > Passwords >** The password you want to view **>** **Action** column **> View password** (represented by the key icon) **> Password details** screen
 :::
 

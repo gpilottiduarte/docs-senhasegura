@@ -11,7 +11,7 @@ To synchronize users, you will need the following:
 
 * * *
 
-::: (info) (LDAP/AD Group Sync Time)
+:::info
 senhasegura's user synchronization services run every **three minutes**. The services check whether any users have been added or removed from your Active Directory group, and mirror any changes in the corresponding senhasegura User Group.
 :::
 

@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -40,11 +40,10 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/gpilottiduarte/docs-senhasegura',
+          editUrl: 'https://github.com/gpilottiduarte/docs-senhasegura',
         },
         blog: {
           showReadingTime: true,
@@ -54,17 +53,35 @@ const config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/gpilottiduarte/docs-senhasegura',
+          editUrl: 'https://github.com/gpilottiduarte/docs-senhasegura',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
+    ],
+    [
+      'redocusaurus',
+      {
+        // Plugin Options for loading OpenAPI files
+        specs: [
+          // Pass it a path to a local OpenAPI YAML file
+          {
+            // Redocusaurus will automatically bundle your spec into a single file during the build
+            spec: 'api/index.yaml',
+            route: '/api/',
+          },
+        ],
+        // Theme Options for modifying how redoc renders them
+        theme: {
+          // Change with your site colors
+          primaryColor: '#1890ff',
+        },
+      },
     ],
   ],
 
@@ -86,6 +103,11 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
+          {
+            to: '/api', // Caminho relativo à baseUrl
+            label: 'API',
+            position: 'left',
+          },
         ],
       },
       footer: {
@@ -96,27 +118,27 @@ const config = {
             items: [
               {
                 label: 'Contato',
-                to: 'https://senhasegura.com/pt-br/contato?utm_source=helpcenter&utm_medium=referral&utm_campaign=helpcenter_senhasegura',
+                href: 'https://senhasegura.com/pt-br/contato?utm_source=helpcenter&utm_medium=referral&utm_campaign=helpcenter_senhasegura',
               },
               {
                 label: 'Política de suporte',
-                to: 'https://docs.senhasegura.io/docs/pt/support-policy',
+                href: 'https://docs.senhasegura.io/docs/pt/support-policy',
               },
               {
                 label: 'Serviços profissionais',
-                to: 'https://docs.senhasegura.io/docs/pt/professional-services',
+                href: 'https://docs.senhasegura.io/docs/pt/professional-services',
               },
               {
                 label: 'End of Life - EoL',
-                to: 'https://docs.senhasegura.io/docs/pt/end-of-life-eol',
+                href: 'https://docs.senhasegura.io/docs/pt/end-of-life-eol',
               },
               {
                 label: 'Guia para resolução de vulnerabilidades',
-                to: 'https://docs.senhasegura.io/docs/pt/vulnerability-handling-guidelines',
+                href: 'https://docs.senhasegura.io/docs/pt/vulnerability-handling-guidelines',
               },
               {
                 label: 'Certificação ISO 27001',
-                to: 'https://docs.senhasegura.io/docs/pt/iso-27001-certification',
+                href: 'https://docs.senhasegura.io/docs/pt/iso-27001-certification',
               },
             ],
           },

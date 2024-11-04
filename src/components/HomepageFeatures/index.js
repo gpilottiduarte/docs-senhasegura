@@ -26,12 +26,12 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Documentation',
+    title: 'API documentation',
     Img: '/img/desktop.png',
-    link: '/docs/changelog', // Adiciona o link correspondente
+    link: '/api/', // Adiciona o link correspondente
     description: (
       <>
-        Check the senhasegura documentation.
+        Check the senhasegura API reference documentation.
       </>
     ),
   },

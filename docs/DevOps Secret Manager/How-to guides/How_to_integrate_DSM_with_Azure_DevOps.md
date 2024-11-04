@@ -31,7 +31,7 @@ If you don't have the `runb` and `senhasegura-mapping.json` files, ask the senha
 
 Example of an `azure-pipelines.yaml` file using DSM CLI:
 
-```
+```bash
 # This file is an example to demonstrate the usage of DSM CLI inside a Azure DevOps pipeline
 # Make sure to upload the executable and the configuration files to your project
 # For more information on its usage, please visit https://docs.senhasegura.io/
@@ -71,39 +71,7 @@ After configuring the DSM CLI in the project, follow the instructions below:
 3. In the next step, click **Run**.
 4. Then click on the job name to view the details and results of the execution.
 
-The execution output will look like this:
-
-```bash
-Starting: senhasegura CLI Running Belt execution
-========================================================================
-Task		: Command 1ine
-Description 	: Run a comand line script using Bash on Linux and macOS and cmd.exe on Windows
-Version:	: 2.201.1
-Author		: Microsoft Corporation
-Help		: https://docs.microsoft.com/azure/devoos/oipelines/tasks/utility/comand-line
-========================================================================
-Generating script.
-============== Starting Command Output ==============
-usr/bin/bash --noprofile --norc /home/admin/azure-runner/work/temp/S0e477c1-6798-4F26-ba37-374b0c1bbOSS.sh
-Using config file: .config.yml
-Registering Application on DevSecOps
-Trying to authenticate on senhasegura DevSecOps API
-Authenticated successfully
-Application register success
-Posting variables in senhasegura...
-Trying to authenticate on senhasegura DevSecOps API
-Athenticated successfully
-Posting variables successfully
-Finding secrets from application
-Trying to authenticate on senhasegura DevSecOps API
-Athenticated successfully
-Injecting secrets!
-No secrets to be injected!
-Deleting azure-devops variables...
-No variables to be deleted!
-Finishing: senhasegura CLI Running Belt execution
-
-```
+The execution output will look like this:Starting: senhasegura CLI Running Belt execution
 
 ---
 

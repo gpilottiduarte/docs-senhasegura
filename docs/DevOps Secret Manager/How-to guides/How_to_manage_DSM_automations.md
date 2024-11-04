@@ -58,7 +58,7 @@ In **Execute this template …** section, you'll define the template containing 
 2. From the **Enabling template** drop-down menu, select one of the templates for that plugin.
    1. When creating automation, you can include an activation template by clicking the sum icon next to the **Enabling template** drop-down menu. This will open the **Execution template** window where you can fill in the necessary details.
 
-::: (error) (Important)
+:::danger
 When a template is created using the on-the-fly creation option, this template doesn't automatically appear in the drop-down menu list. You'll need to re-enter all the information by reloading the page or manually adding a new automation.
 :::
 

@@ -45,10 +45,16 @@
   -
     "name": "Certificate Management"
   -
-    "name": "DevOps Secret Management"
+    "name": "DevOps Secret Management - Secrets"
     "description": "senhasegura DevOps Secret Management (DSM) Endpoints"
   -
-    "name": "Não documentado"
+    "name": "DevOPs Secret Management - CICD"
+  -
+    "name": "DevOPs Secret Management - SCTM"
+  -
+    "name": "DevOPs Secret Management - Authorizations"
+  -
+    "name": "DevOps Secret Management - Application"
   -
     "name": "User Management"
   -
@@ -541,7 +547,7 @@
       "tags":
         - "Dashboard"
       "summary": "Sessions"
-      "description": "Retorna a quantidade de sessões proxy que ocorreram e que ainda estão em execução. Junto da path da URI, deve ser informado qual protocolo desejado <ul> <li>ssh</li> <li>sshweb</li> <li>jumpserver</li> <li>rpd</li> <li>rdpweb</li> <li>rdpgate</li> <li>all</li> </ul>"
+      "description": "<p>Retorna a quantidade de sessões proxy que ocorreram e que ainda estão em execução. Junto da path da URI, deve ser informado qual protocolo desejado</p> <ul> <li>ssh</li> <li>sshweb</li> <li>jumpserver</li> <li>rpd</li> <li>rdpweb</li> <li>rdpgate</li> <li>all</li> </ul>"
       "parameters":
         -
           "name": "protocol_type"
@@ -559,7 +565,7 @@
       "tags":
         - "Dashboard"
       "summary": "Risk"
-      "description": "Retorna as sessões proxy e custódias de senha que sejam suspeitas. Junto da path da URI, deve ser informado qual tipo de operação desejado <ul> <li>RISK_TYPE</li> <ul> <li>all</li> <li>consultas</li> <li>acessos</li> </ul> <li>PROTOCOL PARAM</li> <ul> <li>ssh</li> <li>sshweb</li> <li>jumpserver</li> <li>rdp</li> <li>rdpweb</li> <li>rdpgate</li> <li>telnet</li> <li>vnchttp</li> <li>sql</li> <li>all</li> </ul> </ul>"
+      "description": "<p>Retorna as sessões proxy e custódias de senha que sejam suspeitas. Junto da path da URI, deve ser informado qual tipo de operação desejado</p> <ul> <li>RISK_TYPE</li> <ul> <li>all</li> <li>consultas</li> <li>acessos</li> </ul> <li>PROTOCOL PARAM</li> <ul> <li>ssh</li> <li>sshweb</li> <li>jumpserver</li> <li>rdp</li> <li>rdpweb</li> <li>rdpgate</li> <li>telnet</li> <li>vnchttp</li> <li>sql</li> <li>all</li> </ul> </ul>"
       "parameters":
         -
           "name": "risk_type"
@@ -577,7 +583,7 @@
       "tags":
         - "Dashboard"
       "summary": "Credentials"
-      "description": "Retorna o status das credenciais geridas pelo senhasegura® . Para realizar a consulta é necessário fornecer o estado desejado <ul> <li>all</li> <li>expiradas</li> <li>utilizacao</li> </ul>"
+      "description": "<p>Retorna o status das credenciais geridas pelo senhasegura® . Para realizar a consulta é necessário fornecer o estado desejado</p> <ul> <li>all</li> <li>expiradas</li> <li>utilizacao</li> </ul>"
       "parameters":
         -
           "name": "credential_type"
@@ -896,7 +902,7 @@
   "/iso/dapp/application":
     "get":
       "tags":
-        - "DevOps Secret Management"
+        - "DevOps Secret Management - Secrets"
       "summary": "List All Secrets"
       "description": "Get application details and secrets linked to the authorization."
       "responses":
@@ -906,7 +912,7 @@
             "application/json": {}
     "post":
       "tags":
-        - "Não documentado"
+        - "DevOps Secret Management - Application"
       "summary": "DAPP - Application"
       "description": "Create a new Application/Authorization on DAPP module."
       "requestBody":
@@ -935,7 +941,7 @@
   "/iso/coe/dapp/provision":
     "post":
       "tags":
-        - "DevOps Secret Management"
+        - "DevOps Secret Management - Secrets"
       "summary": "Create Secret"
       "requestBody":
         "content":
@@ -954,7 +960,7 @@
   "/iso/dapp/deprovision":
     "post":
       "tags":
-        - "DevOps Secret Management"
+        - "DevOps Secret Management - Secrets"
       "summary": "Delete Secret"
       "requestBody":
         "content": {}
@@ -995,7 +1001,7 @@
   "/iso/cicd/variables":
     "post":
       "tags":
-        - "Não documentado"
+        - "DevOPs Secret Management - CICD"
       "summary": "CICD - Variables"
       "description": "Envia variáveis para o módulo CICD e, se usado mapeamento senhasegura, essas variáveis serão salvas como um segredo."
       "requestBody":
@@ -1018,7 +1024,7 @@
   "/iso/sctm/secret":
     "post":
       "tags":
-        - "Não documentado"
+        - "DevOPs Secret Management - SCTM"
       "summary": "SCTM - Secret"
       "requestBody":
         "content":
@@ -1037,7 +1043,7 @@
   "/iso/dapp/application/authorization":
     "delete":
       "tags":
-        - "Não documentado"
+        - "DevOPs Secret Management - Authorizations"
       "summary": "DAPP - Authorization"
       "description": "Inativa uma autorização e, se o provisionamento automático estiver habilitado nas configurações da aplicação, toda a cadeia de autorização (segredos, chaves de acesso, credenciais) também serão desprovisionadas."
       "responses":

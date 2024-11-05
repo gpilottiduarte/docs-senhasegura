@@ -541,7 +541,7 @@
       "tags":
         - "Dashboard"
       "summary": "Sessions"
-      "description": "<p>Retorna a quantidade de sessões proxy que ocorreram e que ainda estão em execução. Junto da path da URI, deve ser informado qual protocolo desejado</p> <ul> <li>ssh</li> <li>sshweb</li> <li>jumpserver</li> <li>rpd</li> <li>rdpweb</li> <li>rdpgate</li> <li>all</li> </ul>"
+      "description": "Retorna a quantidade de sessões proxy que ocorreram e que ainda estão em execução. Junto da path da URI, deve ser informado qual protocolo desejado <ul> <li>ssh</li> <li>sshweb</li> <li>jumpserver</li> <li>rpd</li> <li>rdpweb</li> <li>rdpgate</li> <li>all</li> </ul>"
       "parameters":
         -
           "name": "protocol_type"
@@ -559,7 +559,7 @@
       "tags":
         - "Dashboard"
       "summary": "Risk"
-      "description": "<p>Retorna as sessões proxy e custódias de senha que sejam suspeitas. Junto da path da URI, deve ser informado qual tipo de operação desejado</p> <ul> <li>RISK_TYPE</li> <ul> <li>all</li> <li>consultas</li> <li>acessos</li> </ul> <li>PROTOCOL PARAM</li> <ul> <li>ssh</li> <li>sshweb</li> <li>jumpserver</li> <li>rdp</li> <li>rdpweb</li> <li>rdpgate</li> <li>telnet</li> <li>vnchttp</li> <li>sql</li> <li>all</li> </ul> </ul>"
+      "description": "Retorna as sessões proxy e custódias de senha que sejam suspeitas. Junto da path da URI, deve ser informado qual tipo de operação desejado <ul> <li>RISK_TYPE</li> <ul> <li>all</li> <li>consultas</li> <li>acessos</li> </ul> <li>PROTOCOL PARAM</li> <ul> <li>ssh</li> <li>sshweb</li> <li>jumpserver</li> <li>rdp</li> <li>rdpweb</li> <li>rdpgate</li> <li>telnet</li> <li>vnchttp</li> <li>sql</li> <li>all</li> </ul> </ul>"
       "parameters":
         -
           "name": "risk_type"
@@ -577,7 +577,7 @@
       "tags":
         - "Dashboard"
       "summary": "Credentials"
-      "description": "<p>Retorna o status das credenciais geridas pelo senhasegura® . Para realizar a consulta é necessário fornecer o estado desejado</p> <ul> <li>all</li> <li>expiradas</li> <li>utilizacao</li> </ul>"
+      "description": "Retorna o status das credenciais geridas pelo senhasegura® . Para realizar a consulta é necessário fornecer o estado desejado <ul> <li>all</li> <li>expiradas</li> <li>utilizacao</li> </ul>"
       "parameters":
         -
           "name": "credential_type"

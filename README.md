@@ -7,3 +7,7 @@ Apenas para testes.
 
 - Versão 3.32 da documentação em inglês.
 - Documentação da API utilizando o plugins Redocly e o arquivo `yaml` no formato OpenAPI 3.0.
+
+## Disponibilização
+
+Acesse: https://docs-senhasegura.vercel.app/

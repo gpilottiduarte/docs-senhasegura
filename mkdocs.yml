@@ -1,7 +1,7 @@
 site_name: Segura Docs - Testes
 
 theme:
-  name: bootstrap
+  name: readthedocs
   highlightjs: true
   hljs_languages:
     - yaml
